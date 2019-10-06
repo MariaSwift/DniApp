@@ -6,17 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editTextDni;
+    TextView editTextDni = null;
     char letraDNI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        editTextDni = findViewById(R.id.dni);
 
         Log.d("MIAPP", "MainActivity");
 
@@ -26,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
     public void calcularLetraDNI(View view) {
 
         Log.d("MIAPP", "calcularLetraDNI ");
-
-        editTextDni = findViewById(R.id.dni);
 
         String dniSinLetra = editTextDni.getText().toString();
 
@@ -111,11 +111,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        Intent intent = null;
+        Intent intent;
         intent = new Intent(this, MostrarLetraDNI.class);
 
         intent.putExtra("LETRA", letraDNI);
         startActivity(intent);
 
+    }
+
+    public void LimpiarCampoDNI(View view) {
+       editTextDni.setText("");
     }
 }

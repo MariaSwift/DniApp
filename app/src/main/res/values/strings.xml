@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CalculaLetraDNI</string>
+    <string name="limpiar_campo_dni">Limpiar campo DNI</string>
+    <string name="calcular_letra_dni">Calcular Letra DNI</string>
+    <string name="teclee_dni_sin_letra">Teclee DNI sin letra</string>
 </resources>

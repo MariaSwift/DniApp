@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAzulito"
     tools:context=".MainActivity">
 
     <EditText
@@ -13,7 +14,7 @@
         android:layout_marginTop="180dp"
         android:ems="10"
         android:inputType="number"
-        android:hint="Teclee DNI sin letra"
+        android:hint="@string/teclee_dni_sin_letra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.616"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,12 +24,24 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:text="Calcular Letra DNI"
+        android:layout_marginTop="48dp"
         android:onClick="calcularLetraDNI"
+        android:text="@string/calcular_letra_dni"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dni" />
+
+    <Button
+        android:id="@+id/buttonLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:onClick="LimpiarCampoDNI"
+        android:text="@string/limpiar_campo_dni"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
